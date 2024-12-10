@@ -19,6 +19,7 @@ namespace FundamentosNetCore
             this.txtName.Text = "Hello World";
             this.txtName.Width = 200;
             this.txtName.TextAlign = HorizontalAlignment.Center;
+            this.txtName.BackColor = Color.HotPink;
         }
     }
 }
