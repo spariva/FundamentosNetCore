@@ -39,6 +39,12 @@ namespace FundamentosNetCore
             int green = int.Parse(this.txtColorGreen.Text);
             int blue = int.Parse(this.txtColorBlue.Text);
 
+            if(red < 0 || red > 255)
+            {
+                MessageBox.Show("El valor de rojo debe estar entre 0 y 255");
+                return;
+            }
+
             this.txtColorRed.Text = red.ToString();
             this.txtColorGreen.Text = green.ToString();
             this.txtColorBlue.Text = blue.ToString();
