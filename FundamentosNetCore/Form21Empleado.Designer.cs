@@ -1,6 +1,6 @@
 ﻿namespace FundamentosNetCore
 {
-    partial class Form20TestClases
+    partial class Form21Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            label1 = new Label();
             button1 = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(48, 105);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(685, 244);
-            listBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(48, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
             // 
             // button1
             // 
-            button1.Location = new Point(48, 385);
+            button1.Location = new Point(328, 260);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
+            button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Form20TestClases
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(168, 88);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(410, 139);
+            listBox1.TabIndex = 1;
+            // 
+            // Form21Empleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(label1);
             Controls.Add(listBox1);
-            Name = "Form20TestClases";
-            Text = "Form20TestClases";
+            Controls.Add(button1);
+            Name = "Form21Empleado";
+            Text = "Form21Empleado";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ListBox listBox1;
-        private Label label1;
         private Button button1;
+        private ListBox listBox1;
     }
 }
