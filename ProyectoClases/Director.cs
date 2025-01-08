@@ -11,7 +11,21 @@ namespace ProyectoClases
     {
         public Director()
         {
-            this.SalarioMinimo = 1400;
+            this.SalarioMinimo += 200;
+        }
+
+        //SOBREESCRITO (virtual/override) o (new)
+        public override int GetDiasVacaciones()
+        {
+            Debug.WriteLine("Días de vacaciones para un director");
+            int vacacionesBase = base.GetDiasVacaciones();
+            return vacacionesBase + 8;
+        }
+
+        //IMPLEMENTADO
+        public int GetDiasVacaciones(int extras) 
+        {
+            return this.GetDiasVacaciones() + extras;
         }
     }
 }

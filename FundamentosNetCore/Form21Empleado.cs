@@ -23,12 +23,14 @@ namespace FundamentosNetCore
             Empleado empleado = new Empleado();
             empleado.Nombre = "Kai";
             empleado.Apellidos = "V. M.";
-            this.listBox1.Items.Add(empleado.GetNombreCompleto() + empleado.SalarioMinimo);
+            this.listBox1.Items.Add(empleado.GetNombreCompleto() + empleado.getSalarioMinimo() 
+                + " y vacaciones: " + empleado.GetDiasVacaciones());
 
             Director dire = new Director();
             dire.Nombre = "Kaima";
             dire.Apellidos = "V. M.";
-            this.listBox1.Items.Add(dire.GetNombreCompleto() + dire.SalarioMinimo);
+            this.listBox1.Items.Add(dire.GetNombreCompleto() + dire.getSalarioMinimo() 
+                + " y vacaciones: " + dire.GetDiasVacaciones());
 
         }
     }
