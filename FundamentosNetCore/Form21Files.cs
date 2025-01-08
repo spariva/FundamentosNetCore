@@ -11,18 +11,21 @@ using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.VisualBasic.Devices;
 using System.Diagnostics;
+using ProyectoClases.Helpers;
 
 namespace FundamentosNetCore
 {
     public partial class Form21Files : Form
     {
         private string Path { get; set; }
+        //private HelperFiles helper;
 
         public Form21Files()
         {
             InitializeComponent();
             this.Path = @"C:\Users\Alumnos MCSD Mañana\Desktop\NetCore\FundamentosNetCore\FundamentosNetCore\bin\Debug\file1.txt";
             this.Path = "file1.txt";
+            //this.helper = new HelperFiles();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -69,25 +72,9 @@ namespace FundamentosNetCore
 
         private async void btnRead_Click(object sender, EventArgs e)
         {
-            FileInfo file = new FileInfo(this.Path);
-            if (file.Exists)
-            {
-                using (TextReader reader = file.OpenText())
-                {
-                    string data = await reader.ReadToEndAsync();
-                    reader.Close();
-                    this.lstFile.Text = data;
-                    //string[] nombres = data.Split(',');
-                    //foreach (string nombre in nombres)
-                    //{
-                    //    this.lstBoxNombres.Items.Add(nombre);
-                    //}
-                }
-            }
-            else
-            {
-                MessageBox.Show("Fichero no existe");
-            }
+            string data = this.GetNombresListBox();
+            await HelperFiles.WriteFileAsync(this.Path, data);
+            MessageBox.Show("Fichero guardado");
         }
     }
 }
